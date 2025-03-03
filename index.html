@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MultiTool Generator Suite</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+		<div class="container">
+			<a class="navbar-brand" href="#">AI Tools Suite</a>
+			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<div class="navbar-nav">
+					<a class="nav-link active" href="#title-generator">Title Generator</a>
+					<a class="nav-link" href="#content-generator">SEO Content</a>
+					<a class="nav-link" href="#social-generator">Social Posts</a>
+					<a class="nav-link" href="#blog">Blog</a>
+					<div class="nav-item dropdown">
+						<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+							About Us
+						</a>
+						<div class="dropdown-menu">
+							<a class="dropdown-item" href="#disclaimer">Disclaimer</a>
+							<a class="dropdown-item" href="#privacy-policy">Privacy Policy</a>
+							<a class="dropdown-item" href="#about-us">About Us</a>
+							<a class="dropdown-item" href="#contact-us">Contact Us</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+	<main class="container my-5">
+		<section id="title-generator" class="tool-section">
+			<h2>Title Generator</h2>
+			<div class="card">
+				<div class="card-body">
+					<input type="text" class="form-control" placeholder="Enter keywords...">
+					<button class="btn btn-primary mt-3">Generate Titles</button>
+					<div class="results mt-3"></div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Add other tool sections with similar structure -->
+
+		<section id="selected-title" class="tool-section mt-5">
+			<h3>Selected Title Workshop</h3>
+			<div class="card">
+				<div class="card-body">
+					<div class="row g-3">
+						<div class="col-md-8">
+							<textarea class="form-control" id="selectedTitle" 
+									rows="3" placeholder="Selected title will appear here"></textarea>
+						</div>
+						<div class="col-md-4">
+							<div class="d-grid gap-2">
+								<button class="btn btn-success" id="generateOutlines">Generate Outlines</button>
+								<button class="btn btn-info" id="generateArticle">Generate Article</button>
+								<button class="btn btn-warning" id="searchGoogle">Search Google</button>
+								<button class="btn btn-secondary" id="generateStepByStep">Step-by-Step Guide</button>
+							</div>
+						</div>
+					</div>
+					
+					<div class="mt-4">
+						<div class="d-flex justify-content-between align-items-center mb-3">
+							<h4>Content Outlines</h4>
+							<button class="btn btn-sm btn-outline-primary" id="regenerateOutlines">
+								Regenerate All
+							</button>
+						</div>
+						
+						<div class="row g-3">
+							<div class="col-md-4">
+								<div class="d-flex justify-content-between align-items-center mb-2">
+									<label>Outline 1</label>
+									<div>
+										<input type="checkbox" class="form-check-input me-2">
+										<button class="btn btn-sm btn-outline-primary regenerate-btn">Regenerate</button>
+									</div>
+								</div>
+								<textarea class="form-control outline-box" rows="8"></textarea>
+								<div class="loading-indicator d-none">
+									<div class="spinner-border spinner-border-sm"></div>
+									<span>Generating...</span>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="d-flex justify-content-between align-items-center mb-2">
+									<label>Outline 2</label>
+									<div>
+										<input type="checkbox" class="form-check-input me-2">
+										<button class="btn btn-sm btn-outline-primary regenerate-btn">Regenerate</button>
+									</div>
+								</div>
+								<textarea class="form-control outline-box" rows="8"></textarea>
+								<div class="loading-indicator d-none">
+									<div class="spinner-border spinner-border-sm"></div>
+									<span>Generating...</span>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<div class="d-flex justify-content-between align-items-center mb-2">
+									<label>Outline 3</label>
+									<div>
+										<input type="checkbox" class="form-check-input me-2">
+										<button class="btn btn-sm btn-outline-primary regenerate-btn">Regenerate</button>
+									</div>
+								</div>
+								<textarea class="form-control outline-box" rows="8"></textarea>
+								<div class="loading-indicator d-none">
+									<div class="spinner-border spinner-border-sm"></div>
+									<span>Generating...</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
